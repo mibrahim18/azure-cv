@@ -1,17 +1,15 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-  console.log("DOM fully loaded and parsed");
+  getVisitCount();
 });
 
 const functionApi = "";
-
-function addEventListener() {}
 
 const getVisitCount = () => {
   let count = 30;
   fetch(functionApi)
     .then((response) => response.json())
-    .then((jsonResponse) => {
-      count = jsonResponse.count;
+    .then((response) => {
+      count = response.count;
       console.log("Website called functionAPI.");
       document.getElementById("counter").innerText = "count";
     })
