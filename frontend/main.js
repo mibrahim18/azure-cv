@@ -1,20 +1,28 @@
+// Add an event listener to call getVisitCount when the DOM content is loaded
 window.addEventListener("DOMContentLoaded", (event) => {
   getVisitCount();
 });
 
-const functionApi = "";
+// Replace with your cloud-based Azure Function URL
+const functionApi =
+  "https://counteribrahim.azurewebsites.net/api/HttpTrigger1?code=pHzHGSaV0IBmxUk0olJyLH59TIVRGt42xZUBsbIE3QfXAzFu41Yzig==";
 
+// Function to get the visit count from the API
 const getVisitCount = () => {
-  let count = 30;
   fetch(functionApi)
-    .then((response) => response.json())
-    .then((response) => {
-      count = response.count;
-      console.log("Website called functionAPI.");
-      document.getElementById("counter").innerText = "count";
+    .then((response) => response.text()) // Fetch the response as plain text
+    .then((data) => {
+      console.log("Raw response from API:", data); // Log the raw API response for debugging
+      // Use a regular expression to find the first number in the response
+      const countMatch = data.match(/\d+/);
+      // Parse the number or default to 0 if no number is found
+      const count = countMatch ? parseInt(countMatch[0], 10) : 0;
+      console.log("Extracted count:", count); // Log the extracted count
+      // Update the HTML element with the ID 'counter' to show the count
+      document.getElementById("counter").innerText = count;
+      console.log(count);
     })
     .catch((error) => {
-      console.log(error);
+      console.error("Error occurred:", error); // Log any errors encountered during the fetch
     });
-  return count;
 };

@@ -1,8 +1,9 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "AzureWebJobsStorage": "",
-    "FUNCTIONS_INPROC_NET8_ENABLED": "1",
-    "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "COSMOS_ENDPOINT": "https://azure-resume.documents.azure.com:443/",
+    "COSMOS_KEY": "v8yW5KLRJb3MYgOSI4LjQ4JE2CsahmluDEIStGkNNAq2eTP76BofopeBDH5m9yHXaXCAFviuTMEJACDbNxtAHA=="
   }
 }

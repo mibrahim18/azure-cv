@@ -1,0 +1,13 @@
+{
+  "name": "azurefunc",
+  "version": "1.0.0",
+  "description": "Visitors counter using Azure Function & CosmosDB",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/cosmos": "^4.1.1",
+    "winston": "^3.14.2"
+  }
+}
