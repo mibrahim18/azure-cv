@@ -20,7 +20,6 @@ const getVisitCount = () => {
       console.log("Extracted count:", count); // Log the extracted count
       // Update the HTML element with the ID 'counter' to show the count
       document.getElementById("counter").innerText = count;
-      console.log(count);
     })
     .catch((error) => {
       console.error("Error occurred:", error); // Log any errors encountered during the fetch
