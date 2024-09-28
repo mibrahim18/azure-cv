@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hybrid Environment Setup with Hyper-V and Azure</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <style>
+      body {
+        padding: 20px; /* Adjust the value as needed */
+        margin: 0; /* Remove default margin */
+        background-color: #f9f9f9; /* Optional: set a background color */
+      }
+
+      .project-content {
+        max-width: 800px; /* Set a maximum width for better readability */
+        margin: 0 auto; /* Center the content */
+        background-color: #fff; /* Optional: set a background color for the content */
+        padding: 20px; /* Optional: add padding inside the content */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for depth */
+        border-radius: 5px; /* Optional: round the corners */
+      }
+
+      h2 {
+        text-align: center; /* Center the title */
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="project">
+      <!-- Back button at the top -->
+      <div class="back-button">
+        <a href="index.html#project" class="button">⬅️ Back to Projects</a>
+      </div>
+
+      <!-- Project Details -->
+      <div class="project-content">
+        <h2 style="margin-top: 20px">
+          Windows Hybrid Domain Setup with and Azure
+        </h2>
+
+        <p style="margin: 20px 0">
+          Designed and implemented a hybrid environment using
+          <strong>Hyper-V</strong> to create virtual machines and a server,
+          linking them with additional Hyper-V VMs, an Azure VM, and a physical
+          laptop. <br /><br />
+          I integrated <strong>Microsoft Entra/Entra Connect</strong> to enable
+          hybrid join capabilities, utilised <strong>Group Policy</strong> to
+          manage user and device configurations, and implemented
+          <strong>Intune</strong> for software deployment and device
+          configuration policies.
+        </p>
+
+        <h3 style="margin-top: 20px">Key Highlights:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            🌐 **Hybrid Integration**: Combined physical and virtual machines
+            for flexible management.
+          </li>
+          <li>
+            🔗 **Entra Sync**: Enabled hybrid join for seamless integration.
+          </li>
+          <li>
+            🛡️ **Group Policy**: Applied policies for user restrictions and
+            device configurations.
+          </li>
+          <li>
+            📦 **Intune Management**: Tested and deployed device configuration
+            policies and software.
+          </li>
+        </ul>
+
+        <div style="text-align: center; margin: 20px 0">
+          <img src="./images/hybrid-design.png" />
+          <p style="font-style: italic; margin-top: 5px">
+            Hybrid Environment Architecture
+          </p>
+        </div>
+
+        <h3 style="margin-top: 20px">Challenges Faced:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            🛠️ **Configuration Complexity**: Managing settings across different
+            environments was challenging.
+          </li>
+          <div style="text-align: center; margin: 20px 0">
+            <img src="./images/domain error.png" width="300" />
+            <p style="font-style: italic; margin-top: 5px">
+              One of the many challenges - syncing sensitive data between
+              on-prem and Entra ID
+            </p>
+          </div>
+          <li>
+            🔄 **Group Policy Management**: Ensuring policies applied correctly
+            to all devices required thorough testing.
+          </li>
+          <li>
+            🔍 **Testing Intune Policies**: Verifying device configuration
+            policies took additional time and effort.
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 20px">Areas for Improvement:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            ⚙️ **Automated Testing**: Implement automated testing for
+            configuration policies.
+          </li>
+          <li>
+            🔔 **Documentation**: Improve documentation for easier replication
+            of the setup process.
+          </li>
+          <li>
+            📈 **Performance Monitoring**: Integrate better monitoring tools for
+            resource management.
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 20px">Skills Demonstrated:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            ✅ **Hyper-V**: Proficient in creating/managing VMs to optimise
+            resources.
+          </li>
+          <li>
+            ✅ **Hybrid Environment Setup**: Experience in configuring both
+            physical and virtual resources.
+          </li>
+          <li>
+            ✅ **Microsoft Entra/ Entra Connect**: Familiarity with hybrid join
+            capabilities and configurations.
+          </li>
+          <li>
+            ✅ **Group Policy Management**: Applying and managing policies
+            across various devices.
+          </li>
+          <li>
+            ✅ **Intune Integration**: Deploying software and configuring
+            devices efficiently.
+          </li>
+        </ul>
+
+        <!-- Back button at the bottom -->
+        <div class="back-button">
+          <a href="index.html#project" class="button">⬅️ Back to Projects</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
