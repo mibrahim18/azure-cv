@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Automated Employee Onboarding Using Azure</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <style>
+      body {
+        padding: 20px; /* Adjust the value as needed */
+        margin: 0; /* Remove default margin */
+        background-color: #f9f9f9; /* Optional: set a background color */
+      }
+
+      .project-content {
+        max-width: 800px; /* Set a maximum width for better readability */
+        margin: 0 auto; /* Center the content */
+        background-color: #fff; /* Optional: set a background color for the content */
+        padding: 20px; /* Optional: add padding inside the content */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for depth */
+        border-radius: 5px; /* Optional: round the corners */
+      }
+
+      h2 {
+        text-align: center; /* Center the title */
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="project">
+      <!-- Back button at the top -->
+      <div class="back-button">
+        <a href="index.html#project" class="button">⬅️ Back to Projects</a>
+      </div>
+
+      <!-- Project Details -->
+      <div class="project-content">
+        <h2 style="margin-top: 20px">
+          Automated Employee Onboarding Using Azure
+        </h2>
+
+        <p style="margin: 20px 0">
+          Designed and implemented an automated employee onboarding process
+          using <strong>Azure Logic Apps</strong>, showcasing my ability to
+          integrate multiple Azure services for streamlined operations.
+          <br /><br />
+          The workflow is triggered when a new onboarding request is sent via
+          email with the subject of "New Hire (Employee ID)". This will then
+          automatically do the following:
+        </p>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            Create a user account in
+            <strong>Microsoft Entra ID (Azure AD)</strong>
+          </li>
+          <li>Assign the relevant roles and permissions</li>
+          <li>Check for errors and re-assign if applicable</li>
+          <li>
+            Send a customized welcome email to the new employee with their
+            credentials
+          </li>
+          <li>
+            Send a confirmation email to HR confirming the account has been
+            successfully created
+          </li>
+        </ul>
+
+        <div style="text-align: center; margin: 20px 0">
+          <img
+            src="./images/workflow-onboarding-automation.png"
+            alt="Workflow Screenshot"
+            style="max-width: 70%; height: auto; border: 1px solid #ccc"
+          />
+          <p style="font-style: italic; margin-top: 5px">
+            Automated onboarding workflow in Azure Logic Apps
+          </p>
+        </div>
+
+        <h3 style="margin-top: 20px">Key Highlights:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            🚀 **Automation Trigger**: Detects onboarding requests via email
+            subject.
+          </li>
+          <li>
+            👥 **User Creation**: Creates user account in Entra ID (Azure AD)
+            automatically.
+          </li>
+          <li>
+            🔑 **Role Assignment**: Assigns roles/groups based on job functions.
+          </li>
+          <li>
+            ⚠️ **Error Monitoring**: Implements error handling and monitoring
+            for reliability.
+          </li>
+          <li>
+            🔒 **Security Focus**: Dynamically generates secure passwords.
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 20px">Challenges Faced:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            🔄 **Data Mapping**: Challenging mapping of dynamic email fields to
+            Azure AD properties.
+          </li>
+          <li>
+            ⚙️ **Error Handling**: Setting up effective handling for multi-point
+            errors was tough.
+          </li>
+          <li>
+            🔄 **Permissions Management**: Complex role/group assignments based
+            on job titles.
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 20px">Areas for Improvement:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            🔔 **Error Notifications**: Integrate Teams/SMS for quicker issue
+            responses.
+          </li>
+          <li>
+            🔒 **Security Measures**: Use Azure Key Vault for sensitive data
+            management.
+          </li>
+          <li>
+            📈 **Scalability**: Optimise for higher onboarding request volumes.
+          </li>
+          <li>
+            🔗 **HR Integration**: Link directly with systems like Workday or
+            SAP SuccessFactors.
+          </li>
+          <li>
+            🔄 **User Feedback**: Collect feedback for ongoing improvements.
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 20px">Skills Demonstrated:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>✅ **Azure Logic Apps**: Designing automated workflows.</li>
+          <li>
+            ✅ **Entra ID (Azure Active Directory)**: Automating user management
+            and access control.
+          </li>
+          <li>
+            ✅ **Error Handling**: Implementing robust error handling
+            techniques.
+          </li>
+          <li>✅ **Security Practices**: Enhancing security in workflows.</li>
+          <li>
+            ✅ **Monitoring**: Using Azure tools for performance tracking.
+          </li>
+        </ul>
+
+        <!-- Back button at the bottom -->
+        <div class="back-button">
+          <a href="index.html#project" class="button">⬅️ Back to Projects</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
