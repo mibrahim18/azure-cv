@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Azure CV Project with Visitor Counter</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <style>
+      body {
+        padding: 20px;
+        margin: 0;
+        background-color: #f9f9f9;
+      }
+
+      .project-content {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="project">
+      <!-- Back button at the top -->
+      <div class="back-button">
+        <a href="index.html#project" class="button">⬅️ Back to Projects</a>
+      </div>
+
+      <!-- Project Details -->
+      <div class="project-content">
+        <h2 style="margin-top: 20px">Azure CV</h2>
+
+        <p style="margin: 20px 0">
+          Built a cloud-based CV website (this site) using
+          <strong>Azure</strong>. This project demonstrates my ability to
+          integrate <strong>Azure Blob Storage</strong>,
+          <strong>Azure Functions</strong>, and <strong>Cosmos DB</strong>.
+        </p>
+
+        <h3 style="margin-top: 20px">Key Highlights:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>🚀 **Azure Hosting**: Static CV hosted on Azure Blob Storage.</li>
+          <li>
+            ⚡ **Visitor Counter**: Implemented using JavaScript and an Azure
+            Function, connected to Cosmos DB for storing visit data.
+          </li>
+          <li>
+            🌐 **Azure CDN**: Used for HTTPS and custom domain integration,
+            improving performance and security.
+          </li>
+          <li>
+            🛠️ **CI/CD with GitHub**: Set up automated deployment through GitHub
+            Actions.
+          </li>
+        </ul>
+
+        <div style="text-align: center; margin: 20px 0">
+          <img src="./images/site-layout.png" alt="Azure CV Architecture" />
+          <p style="font-style: italic; margin-top: 5px; text-align: center">
+            Azure CV Architecture
+          </p>
+        </div>
+
+        <h3 style="margin-top: 20px">Challenges Faced:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            🛠️ **Azure Function Integration**: Debugging and testing the
+            interaction between the function and Cosmos DB took time.
+          </li>
+          <li>
+            📄 **CDN & Custom Domain Setup**: Configuring the Azure CDN with
+            HTTPS and a custom domain required careful planning.
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 20px">Areas for Improvement:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            ⚙️ **Code Optimization**: Improve efficiency in the visitor
+            counter's code to handle higher traffic.
+          </li>
+          <li>
+            🔔 **Error Handling**: Strengthen error handling and logging within
+            the Azure Function.
+          </li>
+          <li>
+            📊 **Data Visualization**: Add a dashboard to visualize visitor
+            count trends in real-time.
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 20px">Skills Demonstrated:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            ✅ **Azure Blob Storage**: Hosting and serving static content
+            efficiently.
+          </li>
+          <li>
+            ✅ **Azure Functions**: Building serverless code to handle visitor
+            count tracking.
+          </li>
+          <li>
+            ✅ **Cosmos DB**: Managing the storage and retrieval of visitor
+            data.
+          </li>
+          <li>
+            ✅ **GitHub CI/CD**: Automated deployment to Azure for seamless
+            updates.
+          </li>
+        </ul>
+
+        <!-- Back button at the bottom -->
+        <div class="back-button">
+          <a href="index.html#project" class="button">⬅️ Back to Projects</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
