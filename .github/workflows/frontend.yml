@@ -1,5 +1,5 @@
 name: deploy_frontend
-# deploys frontend folder changes
+# Deploys frontend folder changes
 on:
   push:
     branches: [main]
@@ -19,7 +19,7 @@ jobs:
         run: |
           az cdn endpoint purge --content-paths "/*" --profile-name "mycvsite" --name "mycvsite" --resource-group "azure-resume-rg" --account-key ${{ secrets.AZURE_ACCOUNT_KEY }}
 
-      # Azure logout
+      # Azure logout (optional, since we're not logging in)
       - name: logout
         run: |
           az logout
