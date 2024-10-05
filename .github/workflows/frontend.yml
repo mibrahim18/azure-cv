@@ -1,5 +1,5 @@
 name: deploy_frontend
-#deploys frontend folder changes
+# deploys frontend folder changes
 on:
   push:
     branches: [main]
@@ -15,15 +15,12 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Upload to blob storage
-        uses: azure/CLI@v1
-        with:
-          inlineScript: |
-            az storage blob upload-batch --account-name azurecvibrahim --auth-mode key -d '$web' -s frontend/
+        run: |
+          az storage blob upload-batch --account-name azurecvibrahim --auth-mode key -d '$web' -s frontend/ --account-key ${{ secrets.AZURE_ACCOUNT_KEY }}
+
       - name: Purge CDN endpoint
-        uses: azure/CLI@v1
-        with:
-          inlineScript: |
-            az cdn endpoint purge --content-paths  "/*" --profile-name "mycvsite" --name "mycvsite" --resource-group "azure-resume-rg"
+        run: |
+          az cdn endpoint purge --content-paths "/*" --profile-name "mycvsite" --name "mycvsite" --resource-group "azure-resume-rg" --account-key ${{ secrets.AZURE_ACCOUNT_KEY }}
 
       # Azure logout
       - name: logout
