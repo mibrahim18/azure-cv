@@ -14,11 +14,11 @@ jobs:
 
       - name: Upload to Blob Storage
         run: |
-          az storage blob upload-batch --account-name azurecvibrahim --account-key ${{ secrets.AZURE_ACCOUNT_KEY }} --destination '$web' --source frontend/
+          az storage blob upload-batch --account-name azurecvibrahim --account-key ${{ secrets.AZURE_ACCOUNT_KEY }} --destination '$web' --source frontend/ --overwrite
 
       - name: Purge CDN endpoint
         run: |
-          az cdn endpoint purge --content-paths "/*" --profile-name "mycvsite" --name "mycvsite" --resource-group "azure-resume-rg" --account-key ${{ secrets.AZURE_ACCOUNT_KEY }}
+          az cdn endpoint purge --content-paths "/*" --profile-name "mycvsite" --name "mycvsite" --resource-group "azure-resume-rg"
 
       - name: Logout from Azure
         run: az logout
