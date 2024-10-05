@@ -17,14 +17,14 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
- - name: Check if domain error.png exists
+      - name: Check if domain error.png exists
         run: |
           if [ -f "frontend/images/domain error.png" ]; then
             echo "File exists.";
           else
             echo "File is missing.";
           fi
-          
+
       - name: Upload each file to Blob Storage (Overwrite)
         run: |
           for file in $(find frontend -type f); do
