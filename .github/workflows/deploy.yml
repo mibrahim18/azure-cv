@@ -17,9 +17,11 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Upload to Blob Storage with Overwrite
+      - name: Upload each file to Blob Storage (Overwrite)
         run: |
-          az storage blob upload-batch --account-name azurecvibrahim --account-key ${{ secrets.AZURE_ACCOUNT_KEY }} --destination '$web' --source frontend/ --overwrite
+          for file in $(find frontend -type f); do
+            az storage blob upload --account-name azurecvibrahim --account-key ${{ secrets.AZURE_ACCOUNT_KEY }} --container-name '$web' --file $file --name ${file#frontend/} --overwrite;
+          done
 
       - name: Purge CDN endpoint
         run: |
