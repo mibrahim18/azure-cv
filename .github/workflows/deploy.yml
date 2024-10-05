@@ -12,7 +12,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Upload to Blob Storage
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Upload to Blob Storage with Overwrite
         run: |
           az storage blob upload-batch --account-name azurecvibrahim --account-key ${{ secrets.AZURE_ACCOUNT_KEY }} --destination '$web' --source frontend/ --overwrite
 
