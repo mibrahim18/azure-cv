@@ -1,0 +1,24 @@
+name: Deploy to Azure Blob Storage
+
+on:
+  push:
+    branches: [main]
+    paths: ["frontend/**"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Upload to Blob Storage
+        run: |
+          az storage blob upload-batch --account-name azurecvibrahim --account-key ${{ secrets.AZURE_ACCOUNT_KEY }} --destination '$web' --source frontend/
+
+      - name: Purge CDN endpoint
+        run: |
+          az cdn endpoint purge --content-paths "/*" --profile-name "mycvsite" --name "mycvsite" --resource-group "azure-resume-rg" --account-key ${{ secrets.AZURE_ACCOUNT_KEY }}
+
+      - name: Logout from Azure
+        run: az logout
