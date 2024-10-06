@@ -1,27 +1,31 @@
-// Add an event listener to call getVisitCount when the DOM content is loaded
 window.addEventListener("DOMContentLoaded", (event) => {
+  // Get the last known count from localStorage (default to 0 if not found)
+  let lastCount = localStorage.getItem("visitCount") || "Loading...";
+  document.getElementById("counter").innerText = lastCount;
+
+  // Fetch the latest count from the Azure Function
   getVisitCount();
 });
 
-// Replace with your cloud-based Azure Function URL
 const functionApi =
   "https://counteribrahim.azurewebsites.net/api/HttpTrigger1?code=pHzHGSaV0IBmxUk0olJyLH59TIVRGt42xZUBsbIE3QfXAzFu41Yzig==";
 
-// Function to get the visit count from the API
 const getVisitCount = () => {
   fetch(functionApi)
-    .then((response) => response.text()) // Fetch the response as plain text
+    .then((response) => response.text()) // Fetch response as plain text
     .then((data) => {
-      console.log("Raw response from API:", data); // Log the raw API response for debugging
-      // Use a regular expression to find the first number in the response
+      console.log("Raw response from API:", data);
       const countMatch = data.match(/\d+/);
-      // Parse the number or default to 0 if no number is found
       const count = countMatch ? parseInt(countMatch[0], 10) : 0;
-      console.log("Extracted count:", count); // Log the extracted count
-      // Update the HTML element with the ID 'counter' to show the count
+      console.log("Extracted count:", count);
+
+      // Update the HTML element
       document.getElementById("counter").innerText = count;
+
+      // Store the latest count in localStorage
+      localStorage.setItem("visitCount", count);
     })
     .catch((error) => {
-      console.error("Error occurred:", error); // Log any errors encountered during the fetch
+      console.error("Error occurred:", error);
     });
 };
