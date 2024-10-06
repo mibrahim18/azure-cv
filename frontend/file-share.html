@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Secure File Sharing Web App</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <style>
+      body {
+        padding: 20px; /* Adjust the value as needed */
+        margin: 0; /* Remove default margin */
+        background-color: #f9f9f9; /* Optional: set a background color */
+      }
+
+      .project-content {
+        max-width: 800px; /* Set a maximum width for better readability */
+        margin: 0 auto; /* Center the content */
+        background-color: #fff; /* Optional: set a background color for the content */
+        padding: 20px; /* Optional: add padding inside the content */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for depth */
+        border-radius: 5px; /* Optional: round the corners */
+      }
+
+      h2 {
+        text-align: center; /* Center the title */
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="project">
+      <!-- Back button at the top -->
+      <div class="back-button">
+        <a href="index.html#project" class="button">⬅️ Back to Projects</a>
+      </div>
+
+      <!-- Project Details -->
+      <div class="project-content">
+        <h2 style="margin-top: 20px">Secure File Sharing Web App</h2>
+
+        <p style="margin: 20px 0">
+          Developed a web application where users can securely upload files to
+          Azure Blob Storage, generating unique, time-limited links for sharing.
+          These links are valid for 24 hours, after which the uploaded files are
+          automatically deleted from the Blob Storage. Check it out
+          <a
+            href="https://sharer-crgrade8bhhbamhz.uksouth-01.azurewebsites.net/"
+            target="_blank"
+            style="color: #1e90ff; text-decoration: none"
+            >here!</a
+          >
+        </p>
+
+        <h3 style="margin-top: 20px">Key Highlights:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            🌐 **File Uploads**: Users can upload files securely to Azure Blob
+            Storage.
+          </li>
+          <li>
+            🔗 **Unique Links**: Generated time-limited links for sharing files
+            with authorized users.
+          </li>
+          <li>
+            🛠️ **Lifecycle Management**: Files are automatically deleted after
+            24 hours to ensure security.
+          </li>
+          <li>
+            🔒 **Secure Credentials**: Managed sensitive data using Azure Key
+            Vault.
+          </li>
+        </ul>
+
+        <div style="text-align: center; margin: 20px 0">
+          <img src="./images/file share arch.png" alt="Architecture" />
+          <p style="font-style: italic; margin-top: 5px">
+            Architecture Diagram of the Secure File Sharing Web App
+          </p>
+        </div>
+
+        <h3 style="margin-top: 20px">Challenges Faced:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            🛠️ **Security Considerations**: Ensuring secure file access and link
+            expiration.
+          </li>
+          <li>
+            🔄 **Monitoring Performance**: Keeping track of uploads and link
+            usage effectively.
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 20px">Areas for Improvement:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            ⚙️ **Enhanced Security**: Implement additional security features
+            such as user authentication and role-based access control.
+          </li>
+          <li>
+            🔔 **User Interface**: Improve the user interface for better user
+            experience during file uploads.
+          </li>
+          <li>
+            📈 **Performance Optimization**: Optimize the application for faster
+            file upload and link generation times.
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 20px">Skills Demonstrated:</h3>
+        <ul style="margin: 10px 0; padding-left: 20px">
+          <li>
+            ✅ **Azure Blob Storage**: Proficient in managing file uploads and
+            lifecycle.
+          </li>
+          <li>
+            ✅ **Azure Web Apps**: Experience in deploying web applications.
+          </li>
+          <li>
+            ✅ **Key Vault Integration**: Secure management of application
+            credentials.
+          </li>
+          <li>
+            ✅ **Monitoring and Cleanup**: Utilized Lifecycle Management for
+            file management.
+          </li>
+        </ul>
+
+        <!-- Back button at the bottom -->
+        <div class="back-button">
+          <a href="index.html#project" class="button">⬅️ Back to Projects</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
