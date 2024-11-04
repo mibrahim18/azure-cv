@@ -131,6 +131,109 @@
     <!-- Resume Section
    ================================================== -->
    <section id="project">
+    <a href="https://www.youtube.com/playlist?list=PL-hgXJQzRgpqT339fKUSdttVacpL0s-hm" target="_blank" id="floatingButton" class="pulse" style="
+    position: fixed;
+    padding: 10px;
+    background-color: #FF0000;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, opacity 0.3s;
+    display: none;
+    text-align: center;
+    width: 120px;
+  ">
+    Click here to watch<br>my <strong>YouTube</strong> video guides<br>⬅️⬅️⬅️
+</a>
+
+<script>
+    let pulseStarted = false;
+
+    function isInView(element) {
+        const rect = element.getBoundingClientRect();
+        return rect.top <= window.innerHeight && rect.bottom >= 0;
+    }
+
+    document.addEventListener('scroll', function() {
+        const projectsSection = document.querySelector('#project');
+        const floatingButton = document.getElementById('floatingButton');
+
+        if (isInView(projectsSection)) {
+            floatingButton.style.display = 'block';
+            floatingButton.style.opacity = '1';
+            floatingButton.style.transform = 'translateY(0)';
+
+            if (!pulseStarted) {
+                floatingButton.classList.add('pulse');
+                pulseStarted = true;
+
+                setTimeout(() => {
+                    floatingButton.classList.remove('pulse');
+                }, 2000);
+            }
+        } else {
+            floatingButton.style.opacity = '0';
+            floatingButton.style.transform = 'translateY(20px)';
+            setTimeout(() => { floatingButton.style.display = 'none'; }, 300);
+        }
+    });
+</script>
+
+<style>
+    /* Keyframes for the subtle pulsing animation */
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.3); }
+    }
+
+    /* Apply pulsing effect to the button */
+    #floatingButton.pulse {
+        animation: pulse 0.6s ease-in-out infinite;
+    }
+
+    /* Initial and animated states for the button */
+    #floatingButton {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Styles for laptop (desktop) view */
+    @media (min-width: 769px) {
+        #floatingButton {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            bottom: auto;
+            width: 120px;
+            border-radius: 8px;
+        }
+    }
+
+    /* Responsive styles for mobile view */
+    @media (max-width: 768px) {
+        #floatingButton {
+            position: bottom;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 100;
+            width: 100%;
+            padding: 0px 0;
+            font-size: 10px;
+            border-radius: 0;
+            text-align: center;
+            box-shadow: none;
+            z-index: 9999;
+            animation: none;
+            box-sizing: border-box;
+        }
+    }
+</style>
+
+
     <!-- Education ----------------------------------------------- -->
     <div class="row education">
       <div class="three columns header-col">
@@ -187,7 +290,7 @@
           <ul>
             <h3>Secure File Sharing Web App</h3>
             Developed an <strong> Azure web application</strong>  where you can <strong>securely </strong>upload & share files with time-limited links. 
-            Check it out here <a target="_blank" href="https://sharer-crgrade8bhhbamhz.uksouth-01.azurewebsites.net/" style="color: #1E90FF; text-decoration: none;">here!</a>
+            Check it out <a target="_blank" href="https://sharer-crgrade8bhhbamhz.uksouth-01.azurewebsites.net/" style="color: #1E90FF; text-decoration: underline;">here!</a>
             <strong>Skills Covered:</strong>
             <ul style="margin: 10px 0; padding-left: 20px;">
               <li>✅ Azure Blob Storage & Lifecycle Management</li>
